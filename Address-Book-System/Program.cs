@@ -6,9 +6,11 @@ namespace Address_Book_System
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book System");
+            Console.WriteLine("Welcome to Address book program");
 
             AddressBook.AddContact();
+            AddressBook.ContactsDisplay();
+            AddressBook.EditContact();
             AddressBook.ContactsDisplay();
         }
     }
