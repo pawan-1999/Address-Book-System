@@ -20,12 +20,12 @@ namespace Address_Book_System
                 if (key == 1)
                 {
                     AddressBookNewNameValidator();
+                    count--;
                 }
                 else if (key == 2)
                 {
                     AddressBookExistingNameValidator();
                 }
-                count--;
             }
         }
 
@@ -277,6 +277,24 @@ namespace Address_Book_System
             {
 
                 Console.WriteLine("contact of the person {0} does not exist", deleteKey);
+            }
+        }
+
+        public static void PersonSearch()
+        {
+            Console.WriteLine("Enter the city that you want to search");
+            string cityKey = Console.ReadLine();
+            Console.WriteLine("Enter the state that you want to search");
+            string stateKey = Console.ReadLine();
+            foreach (string addressBookName in mySystem.Keys)
+            {
+                foreach (Contacts contact in mySystem[addressBookName])
+                {
+                    if (cityKey.ToLower() == contact.city || stateKey.ToLower() == contact.state)
+                    {
+                        Console.WriteLine("In address book {0}, {1} is staying in {2} city and {3} state", addressBookName, contact.firstName, contact.city, contact.state);
+                    }
+                }
             }
         }
     }
