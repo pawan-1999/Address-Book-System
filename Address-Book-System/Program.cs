@@ -9,8 +9,8 @@ namespace Address_Book_System
             Console.WriteLine("Welcome to Address book program");
 
             AddressBook.addAddressBook();
-            AddressBook.PersonSearch();
             AddressBook.AddressBookSorting();
+            //AddressBook.PersonSearch();
             //Console.WriteLine("\n");
             //AddressBook.ContactsDisplay();
             //Console.WriteLine("\n");
